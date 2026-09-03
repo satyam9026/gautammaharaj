@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Shiviadangency</title>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+
+body{
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:16px 14px;
+  color:#1c2430;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(99,102,241,.14),transparent 45%),
+    radial-gradient(circle at 90% 85%,rgba(14,165,233,.12),transparent 45%),
+    #f3f5fa;
+}
+
+.wrap{width:100%;max-width:400px}
+
+/* Light glassmorphism card on white bg - frosted panels with soft shadow */
+.card{
+  background:rgba(255,255,255,.65);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 18px 44px rgba(30,41,59,.14);
+}
+
+.top{
+  text-align:center;
+  padding:20px 18px 12px;
+}
+
+.avatar-wrap{
+  width:72px;height:72px;
+  margin:0 auto 9px;
+  border-radius:50%;
+  padding:3px;
+  background:linear-gradient(135deg,#6366f1,#0ea5e9);
+}
+.avatar{
+  width:100%;height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #fff;
+  display:block;
+}
+
+.badge{
+  display:inline-block;
+  padding:5px 11px;
+  background:rgba(99,102,241,.08);
+  border:1px solid rgba(99,102,241,.22);
+  border-radius:30px;
+  color:#4f46e5;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.4px;
+  margin-bottom:10px;
+}
+
+h1{font-size:17px;font-weight:900;color:#111827}
+.role{margin-top:3px;font-size:10.5px;color:#5b6472}
+
+.hi-title{
+  margin-top:10px;
+  font-size:14px;
+  font-weight:800;
+  background:linear-gradient(90deg,#4f46e5,#0ea5e9);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  line-height:1.4;
+}
+
+.glass-stats{
+  display:flex;
+  margin:12px 18px 0;
+  background:rgba(255,255,255,.55);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(30,41,59,.05);
+}
+.stat{
+  flex:1;
+  text-align:center;
+  padding:8px 5px;
+  border-right:1px solid rgba(30,41,59,.06);
+}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-size:12px;color:#4f46e5}
+.stat span{font-size:7.5px;color:#7c8794}
+
+.body{padding:12px 18px 18px}
+
+.intro{
+  text-align:center;
+  font-size:10.5px;
+  color:#4b5563;
+  line-height:1.6;
+  margin-bottom:12px;
+}
+
+.glass-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+  margin-bottom:14px;
+}
+.g-cell{
+  background:rgba(255,255,255,.55);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:11px;
+  padding:9px 7px;
+  text-align:center;
+  box-shadow:0 4px 12px rgba(30,41,59,.04);
+}
+.g-cell .ic{font-size:14px;margin-bottom:4px;display:block}
+.g-cell h3{font-size:9.5px;color:#1f2937;margin-bottom:1px}
+.g-cell p{font-size:8px;color:#7c8794;line-height:1.25}
+
+.cta{
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  background:linear-gradient(135deg,#229ed9,#087db5);
+  color:#fff;
+  padding:14px 12px;
+  border-radius:13px;
+  box-shadow:0 10px 24px rgba(34,158,217,.32);
+}
+.cta:active{transform:scale(.98)}
+.cta-main{display:block;font-size:13.5px;font-weight:900}
+.cta-sub{display:block;margin-top:3px;font-size:9.5px;color:rgba(255,255,255,.9)}
+
+.timer{
+  margin-top:8px;
+  text-align:center;
+  color:#8892a0;
+  font-size:9px;
+}
+.timer b{color:#4f46e5}
+
+.disclaimer{
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid rgba(30,41,59,.08);
+  color:#8892a0;
+  font-size:7.5px;
+  line-height:1.5;
+}
+
+.footer{margin-top:8px;text-align:center;color:#a4acb8;font-size:7.5px}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4465434110451349');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4465434110451349&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<div class="wrap">
+  <div class="card">
+
+    <div class="top">
+      <div class="badge">𝐆𝐀𝐔𝐓𝐀𝐌</div>
+
+      <div class="avatar-wrap">
+        <img src="image.png" class="avatar" alt="Nitin Muraka" width="72" height="72">
+      </div>
+
+
+      <div class="role">Stock Market Educator</div>
+
+      <div class="hi-title">स्टॉक मार्केट सीखें</div>
+
+      <div class="glass-stats">
+        <div class="stat"><b>FREE</b><span>ACCESS</span></div>
+        <div class="stat"><b>Hindi+Eng</b><span>LANGUAGE</span></div>
+        <div class="stat"><b>Daily</b><span>UPDATES</span></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <p class="intro">
+        Hindi और English में stock market की basics सीखें — beginner-friendly शिक्षा।
+      </p>
+
+      <div class="glass-grid">
+        <div class="g-cell"><span class="ic">📊</span><h3>Market Basics</h3><p>मूल सिद्धांत सरल भाषा में</p></div>
+        <div class="g-cell"><span class="ic">🗣️</span><h3>Hindi + English</h3><p>दोनों भाषाओं में content</p></div>
+        <div class="g-cell"><span class="ic">🌱</span><h3>Beginner Friendly</h3><p>नए सीखने वालों के लिए</p></div>
+        <div class="g-cell"><span class="ic">👥</span><h3>Community</h3><p>साथ मिलकर सीखें</p></div>
+      </div>
+
+      <a class="cta" id="telegramBtn" href="https://t.me/+LgMZMQxDDr82YmY1" rel="noopener noreferrer">
+        <span class="cta-main">JOIN FREE TELEGRAM COMMUNITY</span>
+        <span class="cta-sub">स्टॉक मार्केट एजुकेशनल कंटेंट के लिए जुड़ें</span>
+      </a>
+
+      <div class="timer">Auto-redirecting in <span id="count">30</span>s...</div>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This platform is for educational and informational purposes only.
+        We do not provide financial advice, investment recommendations, or guaranteed returns.
+        Stock market investments are subject to market risks. Please conduct your own research
+        before making investment decisions.
+        <br><br>
+        यह प्लेटफॉर्म केवल शैक्षिक और सूचनात्मक उद्देश्यों के लिए है। हम कोई निवेश सलाह नहीं देते।
+      </div>
+
+      <div class="footer">© 2026 Nitin Muraka • Educational Community</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById("telegramBtn");
+  var link = "https://t.me/+LgMZMQxDDr82YmY1";
+  var counter = document.getElementById("count");
+  var time = 30;
+
+  btn.addEventListener("click", function(){
+    // No preventDefault, no setTimeout — navigation happens
+    // immediately via the href so in-app browsers don't block it.
+    if(window.fbq){
+      fbq('track','Subscribe',{content_name:'Nitin Muraka Telegram Community'},{eventID:'telegram_subscribe_'+Date.now()});
+    }
+  });
+
+  var t = setInterval(function(){
+    time--;
+    counter.textContent = time;
+    if(time <= 0){
+      clearInterval(t);
+      window.location.href = link;
+    }
+  }, 1000);
+})();
+</script>
+
+</body>
+</html>
